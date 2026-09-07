@@ -1,5 +1,5 @@
 $ErrorActionPreference = 'Stop'
-$root = Split-Path -Parent $PSScriptRoot
+$root = $PSScriptRoot
 $dataPath = Join-Path $root 'data'
 $sitePath = Join-Path $root 'site'
 $capsules = @()
