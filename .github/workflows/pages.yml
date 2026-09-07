@@ -25,9 +25,24 @@ jobs:
     steps:
       - name: Check out source
         uses: actions/checkout@v4
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
       - name: Build public course data
         shell: pwsh
-        run: ./scripts/build-site.ps1
+        run: pwsh -NoProfile -NonInteractive -File ./scripts/build-site.ps1
+      - name: Verify public site output
+        shell: pwsh
+        run: |
+          $requiredFiles = @('./site/index.html', './site/styles.css', './site/app.js', './site/data.json')
+          foreach ($file in $requiredFiles) {
+            if (-not (Test-Path -LiteralPath $file -PathType Leaf)) {
+              throw "Required Pages file is missing: $file"
+            }
+          }
+          $capsules = Get-Content -LiteralPath './site/data.json' -Raw | ConvertFrom-Json
+          if (@($capsules).Count -ne 8) {
+            throw "Expected 8 public capsules, found $(@($capsules).Count)"
+          }
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
