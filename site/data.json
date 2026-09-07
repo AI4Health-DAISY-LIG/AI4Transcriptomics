@@ -1,0 +1,400 @@
+[
+  {
+    "number": 1,
+    "title": "Biological Hierarchy, the Central Dogma, and the Nucleus",
+    "duration": "20 minutes",
+    "level": "core capsule",
+    "summary": "Start with the biological hierarchy, the central dogma, and the idea that every transcriptomic measurement begins as a molecule in a cell.",
+    "outcomes": [
+      "By the end of this capsule a student can",
+      "Place the transcriptome on the ladder from organism to molecule,",
+      "State the central dogma and its exceptions,",
+      "Explain why a gene produces several transcripts,",
+      "Justify why transcriptomic data are counts spanning five orders of magnitude, and",
+      "Name three biological questions that transcriptomics alone cannot answer"
+    ],
+    "topics": [
+      "The ladder of scales",
+      "The central dogma",
+      "What a gene actually looks like",
+      "One genome, many transcriptomes"
+    ],
+    "links": [
+      {
+        "url": "https://ocw.mit.edu/courses/7-016-introductory-biology-fall-2018/",
+        "label": "Eric Lander, 7.016 Introductory Biology (Fall 2018), MIT OpenCourseWare"
+      },
+      {
+        "url": "https://learn.mit.edu/courses/course-v1:MITxT+7.00x",
+        "label": "Eric Lander,MITx 7.00x, Introduction to Biology — The Secret of Life"
+      },
+      {
+        "url": "https://www.dna.caltech.edu/courses/cs191/paperscs191/CrickCentralDogma1970.pdf",
+        "label": "Crick F. Central dogma of molecular biology. Nature 227:561-563 (1970)"
+      },
+      {
+        "url": "http://sdcsb.ucsd.edu/wp-content/uploads/2013/10/nature10098.pdf",
+        "label": "Schwanhäusser B. et al. Global quantification of mammalian gene expression control. Nature 473:337-342 (2011)"
+      },
+      {
+        "url": "https://books.google.fr/books?id=jK6UBQAAQBAJ&lpg=PP1&ots=NgZ4gdIoXd&lr&pg=PP1#v=onepage&q&f=false",
+        "label": "Alberts B. et al. Molecular Biology of the Cell, Sixth Edition, chapters 6 and 7"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "The Anatomy of a Cell: Where mRNA Lives, and Why Sampling Destroys",
+    "duration": "20 minutes",
+    "level": "core capsule",
+    "summary": "A focused 20-minute bridge from biological context to the data structures and decisions used in AI for transcriptomics.",
+    "outcomes": [
+      "A student finishing this capsule can",
+      "say where in the cell each RNA species is found and what that implies for single\\-cell versus single\\-nucleus protocols,",
+      "describe the extraction chain from tissue to purified RNA,",
+      "explain dissociation bias and cell\\-composition confounding in their own words, and",
+      "interpret RIN, mitochondrial fraction, and 3' bias as quality signals in a public dataset"
+    ],
+    "topics": [
+      "The question of this capsule",
+      "A guided tour of the cell",
+      "Where RNA actually sits",
+      "Getting the RNA out",
+      "Dissociation: the bias nobody reports"
+    ],
+    "links": [
+      {
+        "url": "https://ocw.mit.edu/courses/7-016-introductory-biology-fall-2018/",
+        "label": "Eric Lander, 7.016 Introductory Biology (Fall 2018), MIT OpenCourseWare"
+      }
+    ,
+      {
+        "url": "https://www.hubrecht.eu/app/uploads/2017/11/VanOudenaarden_Key_2017-VanDenBrink_Single-cell-sequencing-reveals-dissociation-induced-gene-expression-in-tissue-subpopulations.pdf",
+        "label": "van den Brink S.C. et al. Single-cell sequencing reveals dissociation-induced gene expression in tissue subpopulations. Nature Methods 14:935-936 (2017)"
+      }
+    ,
+      {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6610714/pdf/nihms-1525543.pdf",
+        "label": "Newman A.M. et al. Determining cell type abundance and expression from bulk tissues with digital cytometry (CIBERSORTx). Nature Biotechnology 37:773-782 (2019)"
+      }
+    ,
+      {
+        "url": "https://www.nature.com/articles/s41467-018-08023-x.pdf",
+        "label": "Wang X., Park J., Susztak K., Zhang N.R., Li M. Bulk tissue cell type deconvolution with multi-subject single-cell expression reference (MuSiC). Nature Communications 10:380 (2019)"
+      }
+    ,
+      {
+        "url": "https://books.google.fr/books?id=jK6UBQAAQBAJ&lpg=PP1&ots=NgZ4gdIoXd&lr&pg=PP1#v=onepage&q&f=false",
+        "label": "Alberts B. et al. Molecular Biology of the Cell, Sixth Edition, chapters  12 and 14."
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "GitHub Best Practices: A Start-Up Guide",
+    "duration": "20 minutes",
+    "level": "core capsule",
+    "summary": "A focused 20-minute session to learn the GitHub workflow and best practices for open and reproducible computational research.",
+    "outcomes": [
+      "A student finishing this capsule can initialise and clone a repository", 
+      "Commit and push work",
+      "Open a branch and a pull request",
+      "Write a `.gitignore` that keeps data and credentials out",
+      "Structure an analysis repository that a stranger can run",
+      "Archive a released version with a DOI"
+    ],
+    "topics": [
+      "Why a biology course is teaching you Git",
+      "The problem",
+      "The mental model",
+      "The six commands",
+      "Branches and pull requests"
+    ],
+    "links": [
+        {
+          "url": "https://missing.csail.mit.edu/2020/version-control/](https://missing.csail.mit.edu/2020/version-control/",
+          "label": "MIT — The Missing Semester of Your CS Education, lecture on version control (Git)"
+        },
+        {
+          "url": "https://skills.github.com/](https://skills.github.com/",
+          "label": "GitHub Skills — interactive introductory courses"
+        },
+        {
+          "url": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1004947&type=printable",
+          "label": "Perez-Riverol Y. et al. Ten Simple Rules for Taking Advantage of Git and GitHub. PLoS Computational Biology 12(7):e1004947 (2016)"
+        },
+        {
+          "url": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1005510&type=printable",
+          "label": "Wilson G. et al. Good Enough Practices in Scientific Computing. PLoS Computational Biology 13(6):e1005510 (2017)"
+        },
+        {
+          "url": "https://book.the-turing-way.org/",
+          "label": "The Turing Way — community handbook on reproducible research"
+        },
+        {
+          "url": "https://git-scm.com/book](https://git-scm.com/book",
+          "label": "Chacon S., Straub B. Pro Git, 2nd ed., free online."
+        }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "From Biology to Digital Counts",
+    "duration": "20 minutes",
+    "level": "core capsule",
+    "summary": "A focused 20-minute bridge from biological context to the data structures and decisions used in AI for transcriptomics.",
+    "outcomes": [
+      "A student finishing this capsule can",
+      "Narrate the path from a lysed cell to a FASTQ file,",
+      "Contrast bulk, single\\-cell and spatial transcriptomics in terms of what each averages away,",
+      "Explain what a UMI corrects and what it does not,",
+      "Give the three possible meanings of a zero in a count matrix, and",
+      "Diagnose a confounded experimental design from a metadata table"
+    ],
+    "topics": [
+      "The bridge",
+      "The wet-lab chain",
+      "What a sequencer actually gives you",
+      "Smoothie, fruit salad, and map",
+      "Barcodes and UMIs"
+    ],
+    "links": [
+      {
+        "url": "https://ocw.mit.edu/courses/7-016-introductory-biology-fall-2018/",
+        "label": "Eric Lander, 7.016 Introductory Biology (Fall 2018), MIT OpenCourseWare"
+      },
+      {
+        "url": "https://elearning.uniroma1.it/pluginfile.php/1455530/mod_resource/content/1/Stark%2C%20Grzelak%2C%20Hadfield%20-%202019%20-%20RNA%20sequencing%20the%20teenage%20years.pdf",
+        "label": "Stark R., Grzelak M., Hadfield J. RNA sequencing: the teenage years. Nature Reviews Genetics 20:631-656 (2019)"
+      },
+      {
+        "url": "https://link.springer.com/content/pdf/10.1186/S13059-016-0881-8.pdf",
+        "label": "Conesa A. et al. A survey of best practices for RNA-seq data analysis. Genome Biology 17:13 (2016)"
+      },
+      {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3880143/pdf/nihms282727.pdf",
+        "label": "Leek J.T. et al. Tackling the widespread and critical impact of batch effects in high-throughput data. Nature Reviews Genetics 11:733-739 (2010)"
+      },
+      {
+        "url": "https://www.biorxiv.org/content/biorxiv/early/2019/03/19/582064.full.pdf",
+        "label": "Svensson V. Droplet scRNA-seq is not zero-inflated. Nature Biotechnology 38:147-150 (2020)"
+      },
+      {
+        "url": "https://link.springer.com/content/pdf/10.15252/msb.20188746.pdf",
+        "label": "Luecken M.D., Theis F.J. Current best practices in single-cell RNA-seq analysis: a tutorial. Molecular Systems Biology 15:e8746 (2019)"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "The Quantification Pipeline: Alignment and Counting",
+    "duration": "20 minutes",
+    "level": "core capsule",
+    "summary": "A focused 20-minute bridge from biological context to the data structures and decisions used in AI for transcriptomics.",
+    "outcomes": [
+      "A student finishing this capsule can",
+      "Explain why RNA\\-seq alignment must be splice\\-aware,",
+      "Distinguish a genome, an annotation and a transcriptome index,",
+      "Say what happens to a multi\\-mapping read under featureCounts and under an EM\\-based quantifier,",
+      "State why two pipelines applied to the same FASTQ files give different matrices, and",
+      "Read a MultiQC report critically"
+    ],
+    "topics": [
+      "The problem statement",
+      "Read QC and trimming",
+      "Alignment: why it is not string matching",
+      "The reference and the annotation",
+      "Counting: from alignments to genes"
+    ],
+    "links": [
+      {
+        "url": "https://academic.oup.com/bioinformatics/article-pdf/29/1/15/49060422/bioinformatics29115.pdf",
+        "label": "Dobin A. et al. STAR: ultrafast universal RNA-seq aligner. Bioinformatics 29:15-21 (2013)"
+      },
+      {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5600148/pdf/nihms849351.pdf",
+        "label": "Patro R. et al. Salmon provides fast and bias-aware quantification of transcript expression. Nature Methods 14:417-419 (2017)"
+      },
+      {
+        "url": "https://arxiv.org/pdf/1505.02710",
+        "label": "Bray N.L. et al. Near-optimal probabilistic RNA-seq quantification (kallisto). Nature Biotechnology 34:525-527 (2016)"
+      },
+      {
+        "url": "https://academic.oup.com/bioinformatics/article-pdf/30/7/923/48921621/bioinformatics_30_7_923.pdf",
+        "label": "Liao Y., Smyth G.K., Shi W. featureCounts. Bioinformatics 30:923–930 (2014)"
+      },
+      {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4712774/pdf/f1000research-4-8770.pdf",
+        "label": "Soneson C., Love M.I., Robinson M.D. Differential analyses for RNA-seq: transcript-level estimates improve gene-level inferences. F1000Research 4:1521 (2015)"
+      },
+      {
+        "url": "https://academic.oup.com/bioinformatics/article-pdf/32/19/3047/49021359/btw354.pdf",
+        "label": "Ewels P. et al. MultiQC: summarize analysis results for multiple tools and samples in a single report. Bioinformatics 32:3047-3048 (2016)"
+      },
+      {
+        "url": "https://galaxyproject.org/tutorials/rb-rnaseq/",
+        "label": "Galaxy Training Network — RNA-seq analysis tutorial"
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "The Count Matrix as a Data Structure: Sparsity and Containers",
+    "duration": "20 minutes",
+    "level": "core capsule",
+    "summary": "A focused 20-minute bridge from biological context to the data structures and decisions used in AI for transcriptomics.",
+    "outcomes": [
+      "A student finishing this capsule can",
+      "State the orientation convention of AnnData and of Bioconductor objects and convert between them without error,",
+      "Compute the memory cost of a dense versus a sparse representation,",
+      "Choose CSR or CSC for a given access pattern,",
+      "Explain why `log1p` preserves sparsity and centring does not, and",
+      "Describe how a sparse matrix reaches a GPU as a minibatch"
+    ],
+    "topics": [
+      "Why a whole capsule on a matrix",
+      "The object",
+      "How sparse, exactly",
+      "Three sparse formats",
+      "The container"
+    ],
+    "links": [
+      {
+        "url": "**Wolf F.A., Angerer P., Theis F.J.** SCANPY: large-scale single-cell gene expression data analysis. *Genome Biology* 19:15 (2018)",
+        "label": "https://link.springer.com/content/pdf/10.1186/s13059-017-1382-0.pdf"
+      },
+      {
+        "url": "https://www.biorxiv.org/content/biorxiv/early/2021/12/19/2021.12.16.473007.full.pdf",
+        "label": "**Virshup I. et al.** anndata: Annotated data. *bioRxiv* (2021) — and the AnnData documentation."
+      },
+      {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4509590/pdf/nihms-661499.pdf",
+        "label": "**Huber W. et al.** Orchestrating high-throughput genomic analysis with Bioconductor. *Nature Methods* 12:115–121 (2015)"
+      },
+      {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7358058/pdf/nihms-1600055.pdf",
+        "label": "Amezquita R.A. et al.** Orchestrating single-cell analysis with Bioconductor. *Nature Methods* 17:137–145 (2020)"
+      },
+      {
+        "url": "https://www.researchgate.net/profile/Daniel-Blankenberg-3/publication/261757914_Analysis_of_Next-Generation_Sequencing_Data_Using_Galaxy/links/53ce87c20cf2d9fc4314aeed/Analysis-of-Next-Generation-Sequencing-Data-Using-Galaxy.pdf",
+        "label": "Blankenberg, Daniel et al. Analysis of next-generation sequencing data using Galaxy. Stem Cell Transcriptional Networks: Methods and Protocols. New York, NY: Springer New York, 2014. 21-43."
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "Data Stewardship: Repositories, Reuse and the FAIR Principles",
+    "duration": "20 minutes",
+    "level": "core capsule",
+    "summary": "A focused 20-minute bridge from biological context to the data structures and decisions used in AI for transcriptomics.",
+    "outcomes": [
+      "A student finishing this capsule can",
+      "Navigate a GEO series down to its supplementary files and its SRA links,",
+      "Distinguish open from controlled-access archives and say why a rare-disease dataset may be in the latter,",
+      "Apply the four FAIR principles to a dataset and to their own project,",
+      "Recognise inadequate metadata, and",
+      "Deposit and cite their own work with a persistent identifier"
+    ],
+    "topics": [
+      "The reuse premise",
+      "\"Available upon request\"",
+      "The repository landscape",
+      "Anatomy of a GEO record",
+      "FAIR, principle by principle"
+    ],
+    "links": [
+        {
+          "url": "https://www.nature.com/articles/sdata201618/%22",
+          "label": "**Wilkinson M.D. et al.** The FAIR Guiding Principles for scientific data management and stewardship. *Scientific Data* 3:160018 (2016)"
+        },
+        {
+          "url": "https://gi.cebitec.uni-bielefeld.de/_media/teaching/2013winter/307321.full.pdf",
+          "label": "**Gymrek M. et al.** Identifying personal genomes by surname inference. *Science* 339:321-324 (2013)"
+        },
+        {
+          "url": "https://academic.oup.com/nar/article-pdf/41/D1/D991/3678141/gks1193.pdf",
+          "label": "**Barrett T. et al.** NCBI GEO: archive for functional genomics data sets. *Nucleic Acids Research* 41:D991-D995 (2013)"
+        },
+        {
+          "url": "https://link.springer.com/content/pdf/10.1186/s13059-021-02533-6.pdf",
+          "label": "**Wilks C. et al.** recount3: summaries and queries for large-scale RNA-seq expression and splicing. *Genome Biology* 22:323 (2021)"
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/geo/index.cgi",
+          "label": "Gene Expression Omnibus"
+        },
+        {
+          "url": "https://book.the-turing-way.org/",
+          "label": "The Turing Way — community handbook on reproducible research"
+        }
+    ]
+  },
+  {
+    "number": 8,
+    "title": "Dimensionality Reduction and Visualisation: The Bridge to AI",
+    "duration": "20 minutes",
+    "level": "core capsule",
+    "summary": "Close the block by connecting count matrices to PCA, UMAP, autoencoders, and count-aware representation learning.",
+    "outcomes": [
+      "A student finishing this capsule can",
+      "justify normalisation and feature selection before any projection,",
+      "explain PCA as an SVD and read a scree plot,",
+      "use a PCA coloured by covariate as a design diagnostic,",
+      "state precisely what a UMAP does and does not preserve, and",
+      "situate autoencoders and scVI as non\\-linear successors to PCA with a count\\-appropriate likelihood"
+    ],
+    "topics": [
+      "Twenty thousand dimensions",
+      "Why reduce at all",
+      "What must happen first",
+      "PCA, properly",
+      "PCA as your first diagnostic"
+    ],
+    "links": [
+      {
+        "url": "https://scvi-tools.org/",
+        "label": "scvi-tools"
+      },
+      {
+        "url": "https://www.ebi.ac.uk/training/online/courses/analysis-of-rna-seq-data-i/",
+        "label": "RNA-seq primer"
+      },
+      {
+        "url": "https://scvi-tools.org/",
+        "label": "scvi-tools"
+      },
+      {
+        "url": "https://www.nature.com/articles/s41467-019-13056-x.pdf",
+        "label": "**Kobak D., Berens P.** The art of using t-SNE for single-cell transcriptomics. *Nature Communications* 10:5416 (2019)"
+      },
+      {
+        "url": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1011288&type=printable",
+        "label": "**Chari T., Pachter L.** The specious art of single-cell genomics. *PLoS Computational Biology* 19(8):e1011288 (2023)"
+      },
+      {
+        "url": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1012403&type=printable",
+        "label": "**Wang T. et al.** The art of seeing the elephant in the room: 2D embeddings of single-cell data do make sense. *PLoS Computational Biology* 20(9):e1012403 (2024) — the published reply to Chari & Pachter. Read the two together."
+      },
+      {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6289068/pdf/nihms-1510930.pdf",
+        "label": "**Lopez R. et al.** Deep generative modeling for single-cell transcriptomics (scVI). *Nature Methods* 15:1053-1058 (2018)"
+      },
+      {
+        "url": "https://link.springer.com/content/pdf/10.15252/msb.20188746.pdf",
+        "label": "**Luecken M.D., Theis F.J.** Current best practices in single-cell RNA-seq analysis: a tutorial. *Molecular Systems Biology* 15:e8746 (2019)"
+      },
+      {
+        "url": "https://arxiv.org/pdf/1802.03426",
+        "label": "**McInnes L., Healy J., Melville J.** UMAP: Uniform Manifold Approximation and Projection. *arXiv*:1802.03426 (2018)"
+      },
+      {
+        "url": "https://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf?fbcl",
+        "label": "**van der Maaten L., Hinton G.** Visualizing data using t-SNE. *Journal of Machine Learning Research* 9:2579-2605 (2008)"
+      },
+      {
+        "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/",
+        "label": "****Gilbert Strang**, *18.06 Linear Algebra*, MIT OpenCourseWare — lectures on the SVD"
+      }
+    ]
+  }
+]
