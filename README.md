@@ -4,7 +4,7 @@ Course website for **From Nucleus to Neural Networks: Foundations of AI in Trans
 
 ## Local testing
 
-Build the public capsule data from the private course notes, then serve the static site:
+Build the public course data from the private course notes, then serve the static site:
 
 ```powershell
 ./scripts/build-site.ps1

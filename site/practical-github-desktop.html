@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Practical sessions: fork, commit, push, pull request, issues and peer review with GitHub Desktop.">
+  <title>Practical: GitHub Desktop | AI4Transcriptomics</title>
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=6">
+</head>
+<body class="tutorial-page">
+  <header class="site-header">
+    <a class="wordmark" href="index.html"><img src="icon.png" alt=""><span>AI4<span>Transcriptomics</span></span></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="nav-link" href="index.html">Overview</a>
+      <a class="nav-link" href="index.html#courses">Courses</a>
+      <a class="nav-link is-active" href="index.html#resources">Resources</a>
+      <a class="nav-link" href="index.html#about">About</a>
+    </nav>
+    <a class="github-link" href="https://github.com/AI4Health-DAISY-LIG/AI4Transcriptomics" target="_blank" rel="noreferrer">View on GitHub <span>↗</span></a>
+  </header>
+
+  <div class="tutorial-layout">
+    <aside class="tutorial-index">
+      <p class="eyebrow">Practical sessions</p>
+      <a class="tutorial-index-link is-current" href="practical-github-desktop.html"><span class="number">01</span><span class="title">Git without the terminal: GitHub Desktop</span><span class="author">by Sandrine Muller, PhD</span></a>
+      <nav class="page-index" aria-label="On this page">
+        <p class="eyebrow">On this page</p>
+        <a href="#s0">0. Before you start</a>
+        <a href="#s1">1. Install and sign in</a>
+        <a href="#s2">2. Fork, then clone your fork</a>
+        <a href="#s3">3. Make your first commit</a>
+        <a href="#s4">4. Push to your fork</a>
+        <a href="#s5">5. Open your pull request early</a>
+        <a href="#s6">6. Keep working: commit, push</a>
+        <a href="#s7">7. Ask and answer in Issues</a>
+        <a href="#s8">8. Review a peer's pull request</a>
+        <a href="#s9">9. Stay in sync</a>
+        <a href="#s10">10. Cite your work in the report</a>
+        <a href="#s11">11. Troubleshoot</a>
+        <a href="#equivalents">Command-line equivalents</a>
+        <a href="#gitlab">With GitLab</a>
+        <a href="#next">Next step</a>
+      </nav>
+    </aside>
+
+    <article class="tutorial-article">
+      <h1>Git without the terminal: GitHub Desktop</h1>
+      <p class="tutorial-lede">The Git side of the practical sessions, with buttons. You fork the course repository, commit and push your work, open the pull request that carries your submission, ask in Issues and review a peer.</p>
+
+      <h2 id="s0">0. Before you start</h2>
+      <p>The practical sessions run in the course repository <a href="https://github.com/AI4Health-DAISY-LIG/AI4Transcriptomics_AI4OH_2026" target="_blank" rel="noreferrer">AI4Health-DAISY-LIG/AI4Transcriptomics_AI4OH_2026 ↗</a>. Its README states the rules, the grading and the deadlines, and it prevails over this page. This tutorial shows how to do each Git operation it asks for with GitHub Desktop, a Git client for Windows and macOS. Each button corresponds to a command of <a href="index.html#courses-3">Course 03 · Git Best Practices</a>; the <a href="#equivalents">table at the end</a> gives the mapping.</p>
+
+      <h3>Three copies of one repository</h3>
+      <p>You have no write access to the course repository, so you work through a fork. A fork keeps its link to the repository it comes from: GitHub shows "forked from", tells you how many commits you are behind, and syncs the two in one click. Your pull request carries that origin with it, so each line of your submission can be traced to you and to a commit.</p>
+      <div class="practical-table">
+        <table>
+          <thead><tr><th>Copy</th><th>Where</th><th>Git calls it</th><th>You can</th></tr></thead>
+          <tbody>
+            <tr><td>The course repository</td><td>On GitHub, in the AI4Health-DAISY-LIG organisation</td><td><code>upstream</code></td><td>Read it, open issues, send your pull request</td></tr>
+            <tr><td>Your fork</td><td>On GitHub, in your account</td><td><code>origin</code></td><td>Push</td></tr>
+            <tr><td>Your clone</td><td>On your laptop</td><td>the local repository</td><td>Edit, run and commit</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>You commit in your clone and push to your fork. One pull request, opened early, shows your fork to the course repository until the deadline. It targets the branch named after your GitHub handle, which the instructor creates for you. Nobody merges it during the practical: its state at the deadline is what is graded.</p>
+      <p class="callout">The course repository is public: your fork, your code and your comments are visible to anyone. You may use a GitHub account that does not show your real name.</p>
+
+      <h3>Where each step counts</h3>
+      <div class="practical-table">
+        <table>
+          <thead><tr><th>By</th><th>Milestone of the course repository</th><th>Sections of this page</th></tr></thead>
+          <tbody>
+            <tr><td>Wed. 25 November</td><td>Fork created, first commit pushed, pull request opened to your branch</td><td><a href="#s2">2</a> to <a href="#s5">5</a></td></tr>
+            <tr><td>Wed. 2 December</td><td>At least one Issue opened or answered on the course repository</td><td><a href="#s7">7</a></td></tr>
+            <tr><td>Fri. 4 December</td><td>A first complete draft of the code in your pull request</td><td><a href="#s6">6</a></td></tr>
+            <tr><td>Wed. 9 December</td><td>At least one review of a peer's pull request</td><td><a href="#s8">8</a></td></tr>
+            <tr><td>Wed. 16 December</td><td>Final state of the pull request, report on UNESS</td><td><a href="#s6">6</a>, <a href="#s10">10</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tutorial-meta">
+        <div><p class="eyebrow">Learning objectives served</p>
+          <ul>
+            <li><strong>Reproducibility.</strong> Each state of your analysis is a commit that another person can pull and rerun.</li>
+            <li><strong>Provenance, transparency and collaborative translational science.</strong> Commits, issues and reviews record who did what, when and why.</li>
+          </ul></div>
+        <div><p class="eyebrow">Before the first practical</p>
+          <ul>
+            <li>A GitHub account.</li>
+            <li>Your GitHub handle sent through the set-up form on UNESS. The instructor then creates the branch named after your handle.</li>
+            <li><a href="https://ai4health-daisy-lig.github.io/python4beginners/tutorial.html?collection=tutorials&lesson=setup" target="_blank" rel="noreferrer">uv installed ↗</a>.</li>
+          </ul></div>
+      </div>
+
+      <h2 id="s1">1. Install and sign in</h2>
+      <p>Download GitHub Desktop from <a href="https://desktop.github.com/" target="_blank" rel="noreferrer">desktop.github.com ↗</a> and install it.</p>
+      <p>Open it and sign in with your GitHub account: <span class="ui">File</span> → <span class="ui">Options</span> → <span class="ui">Accounts</span> on Windows, <span class="ui">GitHub Desktop</span> → <span class="ui">Settings</span> → <span class="ui">Accounts</span> on macOS.</p>
+      <p>In the same window, open <span class="ui">Git</span> and check the name and the email that will sign your commits. They are public. If you use a pseudonymous account, put the same pseudonym here.</p>
+
+      <h2 id="s2">2. Fork, then clone your fork</h2>
+      <p><strong>Fork.</strong> Open the <a href="https://github.com/AI4Health-DAISY-LIG/AI4Transcriptomics_AI4OH_2026" target="_blank" rel="noreferrer">course repository ↗</a> in the browser and click <span class="ui">Fork</span>, at the top right. Keep the proposed name. GitHub creates <code>your-handle/AI4Transcriptomics_AI4OH_2026</code>.</p>
+      <p><strong>Clone your fork.</strong> In GitHub Desktop: <span class="ui">File</span> → <span class="ui">Clone repository…</span> Pick your fork in the <span class="ui">GitHub.com</span> tab, choose a local folder outside any synchronised drive, and click <span class="ui">Clone</span>.</p>
+      <p>GitHub Desktop sees that the repository is a fork and asks how you plan to use it. Choose <span class="ui">To contribute to the parent project</span>. Your pull request will then go to the course repository.</p>
+      <p class="callout">Check the name before you clone: it must start with your handle. A clone of the course repository lets you commit, and refuses your first push.</p>
+      <figure class="shot-figure" data-shot="images/github-desktop/02-window.png">
+        <div class="shot">
+          <div class="shot-bar"><i></i><i></i><i></i><span>GitHub Desktop</span></div>
+          <div class="gd-top">
+            <div class="hl"><b class="pin">1</b><small>Current Repository</small>AI4Transcriptomics_AI4OH_2026 ▾</div>
+            <div class="hl"><b class="pin">2</b><small>Current Branch</small>main ▾</div>
+            <div class="hl"><b class="pin">3</b><small>Last fetched just now</small>⟳ Fetch origin</div>
+          </div>
+          <div class="gd-body">
+            <div class="gd-side"><div class="gd-tabs"><span class="on">Changes</span><span>History</span></div><p class="gd-empty">0 changed files</p></div>
+            <div class="gd-main"><p class="gd-big">No local changes</p><p class="gd-empty">There are no uncommitted changes in this repository.</p></div>
+          </div>
+        </div>
+        <figcaption><b>1</b> your clone of your fork. <b>2</b> the branch you are on: <code>main</code>, the one you work on in your fork. <b>3</b> the remote button: it reads Fetch, Pull or Push according to the situation. "origin" is your fork.</figcaption>
+      </figure>
+
+      <h2 id="s3">3. Make your first commit</h2>
+      <p>Produce something to commit. In a terminal, inside the <code>practical</code> folder of your clone (<span class="ui">Repository</span> → <span class="ui">Open in Command Prompt</span> or <span class="ui">Open in Terminal</span>, then <code>cd practical</code>):</p>
+      <pre class="practical-code">uv sync
+uv run python scripts/step1_fetch_and_audit.py</pre>
+      <p>Back in GitHub Desktop, the <span class="ui">Changes</span> tab lists the new and modified files and shows the difference line by line. This view is <code>git status</code> and <code>git diff</code> at once. You should see files under <code>results/step1_audit/</code>.</p>
+      <p>The checkboxes are <code>git add</code>: tick the files that belong to this commit. Then write the message at the bottom left. <span class="ui">Summary</span> is the short first line. <span class="ui">Description</span> is the why, or what is left to do. Click <span class="ui">Commit to main</span>.</p>
+      <figure class="shot-figure" data-shot="images/github-desktop/03-commit.png">
+        <div class="shot">
+          <div class="shot-bar"><i></i><i></i><i></i><span>GitHub Desktop</span></div>
+          <div class="gd-top">
+            <div><small>Current Repository</small>AI4Transcriptomics_AI4OH_2026 ▾</div>
+            <div><small>Current Branch</small>main ▾</div>
+            <div><small>Last fetched just now</small>⟳ Fetch origin</div>
+          </div>
+          <div class="gd-body">
+            <div class="gd-side">
+              <div class="gd-tabs"><span class="on">Changes 2</span><span>History</span></div>
+              <p class="gd-file hl"><b class="pin">1</b>☑ practical/results/step1_audit/…</p>
+              <p class="gd-file">☑ practical/worksheets/step1_audit.md</p>
+              <div class="gd-commit">
+                <div class="field hl"><b class="pin">2</b>Run step 1: fetch and audit GSE115650</div>
+                <div class="field tall">The script runs unchanged on my machine. To do next time: check the batch column.</div>
+                <span class="btn primary wide hl"><b class="pin">3</b>Commit to main</span>
+              </div>
+            </div>
+            <div class="gd-main diff"><p class="ctx">## Sample table</p><p class="add">+ Samples in GEO: …</p><p class="add">+ Samples in the count file: …</p></div>
+          </div>
+        </div>
+        <figcaption><b>1</b> the checkboxes select what goes into the commit. <b>2</b> summary, then description. <b>3</b> the commit goes to the main branch of your clone.</figcaption>
+      </figure>
+      <p class="callout">Read the list of files before you commit. Nothing from <code>practical/data/</code> or <code>practical/doc/</code> may appear: no data file, no PDF of the paper, no report. The <code>.gitignore</code> of the practical already excludes both folders. If such a file shows up, you saved it in the wrong place: move it, do not commit it.</p>
+
+      <h2 id="s4">4. Push to your fork</h2>
+      <p>The commit exists only on your laptop. The top bar now reads <span class="ui">Push origin</span> with a counter. Click it: your commit goes to your fork.</p>
+      <figure class="shot-figure" data-shot="images/github-desktop/04-push.png">
+        <div class="shot">
+          <div class="shot-bar"><i></i><i></i><i></i><span>GitHub Desktop</span></div>
+          <div class="gd-top">
+            <div><small>Current Repository</small>AI4Transcriptomics_AI4OH_2026 ▾</div>
+            <div><small>Current Branch</small>main ▾</div>
+            <div class="hl"><b class="pin">1</b><small>Last fetched just now</small>⇧ Push origin <em>1 ↑</em></div>
+          </div>
+          <div class="gd-body">
+            <div class="gd-side"><div class="gd-tabs"><span class="on">Changes</span><span>History</span></div><p class="gd-empty">0 changed files</p></div>
+            <div class="gd-main"><p class="gd-big">No local changes</p><div class="gd-suggest"><span>Push commits to the origin remote<br><small>You have 1 local commit waiting to be pushed to GitHub.</small></span><span class="btn primary">Push origin</span></div></div>
+          </div>
+        </div>
+        <figcaption><b>1</b> one commit waits. After the push it is on your fork. The course repository has not changed.</figcaption>
+      </figure>
+
+      <h2 id="s5">5. Open your pull request early</h2>
+      <p>Your pull request is your submission. Open it as soon as you have pushed one commit: each later push to your fork appears in it automatically.</p>
+      <p><span class="ui">Branch</span> → <span class="ui">Create pull request</span>. The browser opens on the form of the course repository. Before you write anything, set the first line:</p>
+      <ul>
+        <li><strong>base repository:</strong> <code>AI4Health-DAISY-LIG/AI4Transcriptomics_AI4OH_2026</code></li>
+        <li><strong>base:</strong> the branch named after your handle, <strong>not</strong> <code>main</code></li>
+        <li><strong>head repository:</strong> your fork, <strong>compare:</strong> <code>main</code></li>
+      </ul>
+      <p>The description is pre-filled with the template of the course: the four steps to tick, the checks, what you want reviewers to look at, and the help you received and gave. Fill it, then click <span class="ui">Create pull request</span>. You edit this description as you progress.</p>
+      <p>Commits you pushed before you opened the pull request are already in it: see <a href="#earlier-commits">troubleshooting</a> if some seem to be missing.</p>
+      <figure class="shot-figure" data-shot="images/github-desktop/05-pull-request.png">
+        <div class="shot">
+          <div class="shot-bar browser"><i></i><i></i><i></i><span>AI4Health-DAISY-LIG/AI4Transcriptomics_AI4OH_2026 · Open a pull request</span></div>
+          <div class="web single">
+            <p class="compare hl" style="position:relative"><b class="pin">1</b>base repository: <b>AI4Health-DAISY-LIG/AI4Transcriptomics_AI4OH_2026</b> · base: <b>your-handle</b> ← head repository: <b>your-handle/AI4Transcriptomics_AI4OH_2026</b> · compare: <b>main</b></p>
+            <label>Title</label><div class="field">Practical of your-handle</div>
+            <label>Description</label><div class="field tall hl" style="position:relative"><b class="pin">2</b><b>Where I am</b><br>☑ Step 1: fetch and audit &nbsp; ☐ Step 2: QC and exploration &nbsp; ☐ Step 3 &nbsp; ☐ Step 4<br><b>Checks</b><br>☑ The base branch is the one named after my handle, not main …</div>
+            <div class="web-actions"><span class="btn primary">Create pull request</span></div>
+          </div>
+        </div>
+        <figcaption><b>1</b> from the main branch of your fork to your own branch of the course repository. <b>2</b> the template of the course, to keep up to date.</figcaption>
+      </figure>
+      <p class="callout">If the list of base branches does not contain your handle, your branch does not exist yet: check that you sent your handle through the UNESS form, then ask in an Issue. Do not open the pull request against <code>main</code>.</p>
+
+      <h2 id="s6">6. Keep working: commit, push</h2>
+      <p>Each time you stop working, commit and push, even if the code is broken. A message such as "to do next time: …" or "having a bug in …" is a good message: your commit history is part of your work.</p>
+      <ol>
+        <li>Look at <span class="ui">Changes</span>, tick the files.</li>
+        <li>Write the summary, click <span class="ui">Commit to main</span>.</li>
+        <li>Click <span class="ui">Push origin</span>.</li>
+      </ol>
+      <p>The pull request shows the new commits at once. Its state at the deadline is what is graded. It must contain all your code, your results and your filled worksheets. To see what a past commit changed, open the <span class="ui">History</span> tab and select it.</p>
+
+      <h2 id="s7">7. Ask and answer in Issues</h2>
+      <p>Questions go to the Issues of the course repository, not to private messages: one issue per question. This is your help trail, and it makes the help you give visible.</p>
+      <p><strong>Ask.</strong> <span class="ui">Repository</span> → <span class="ui">Create issue on GitHub</span>, or the <span class="ui">Issues</span> tab of the course repository → <span class="ui">New issue</span>. Choose the question template, the only way to open one. Check that the address bar shows the course repository.</p>
+      <figure class="shot-figure" data-shot="images/github-desktop/07-issue.png">
+        <div class="shot">
+          <div class="shot-bar browser"><i></i><i></i><i></i><span>AI4Health-DAISY-LIG/AI4Transcriptomics_AI4OH_2026 · New issue</span></div>
+          <div class="web single">
+            <label>Title</label><div class="field">[step 2] The PCA separates the batches, not the conditions</div>
+            <label>Step</label><div class="field small">Step 2, QC and exploration ▾</div>
+            <label>My question</label><div class="field tall">What I am trying to do and where I am stuck.</div>
+            <label>File or line of code</label><div class="field hl"><b class="pin">1</b>https://github.com/your-handle/…/step2_qc_exploration.py#L42</div>
+            <label>What I tried · Error message or output</label><div class="field tall">The command I ran and what I expected.</div>
+            <div class="web-actions"><span class="btn primary">Create</span></div>
+          </div>
+        </div>
+        <figcaption><b>1</b> a permalink to the line of your fork that the question concerns (see <a href="#s10">section 10</a>).</figcaption>
+      </figure>
+      <p><strong>Answer.</strong> Open a peer's issue and write in the comment box. Explain, point to documentation, debug together. Do not paste a solution to copy.</p>
+      <p><strong>Link.</strong> Each issue and each pull request has a number. Typing <code>#12</code> in any comment or description creates a link in both directions. In your pull request, list under "Help I received and gave" the issues where you were helped and those you answered, for example <code>#12</code>, <code>#31</code>. To address someone, type <code>@their-handle</code>.</p>
+
+      <h2 id="s8">8. Review a peer's pull request</h2>
+      <p>You review at least one peer's pull request in the week before the final deadline. Open the course repository in the browser, then <span class="ui">Pull requests</span>, choose a peer's request and go to <span class="ui">Files changed</span>.</p>
+      <ol>
+        <li>Read what the author asks reviewers to look at, in the description.</li>
+        <li>Hover a line and click <span class="ui">+</span> to comment on that line. Ask a question or suggest an improvement.</li>
+        <li>Click <span class="ui">Review changes</span>, write a summary, choose <span class="ui">Comment</span>, and submit.</li>
+        <li>The author answers in the thread and, if needed, commits and pushes a change: the request updates itself.</li>
+      </ol>
+      <figure class="shot-figure" data-shot="images/github-desktop/08-review.png">
+        <div class="shot">
+          <div class="shot-bar browser"><i></i><i></i><i></i><span>Practical of peer-handle #7</span></div>
+          <div class="web single">
+            <div class="web-tabs"><span>Conversation</span><span>Commits</span><span class="on">Files changed</span><span class="btn primary hl right"><b class="pin">2</b>Review changes ▾</span></div>
+            <div class="diff"><p class="ctx">  # keep genes with enough counts</p><p class="add"><span class="plus hl"><b class="pin">1</b>+</span>+ keep = (counts &gt;= 10).sum(axis=0) &gt;= 3</p></div>
+            <div class="comment"><strong>you</strong> Why 3 samples? The smallest group has more. See #12.<div class="web-actions"><span class="btn">Reply…</span><span class="btn">Resolve conversation</span></div></div>
+          </div>
+        </div>
+        <figcaption><b>1</b> the + on a line opens a comment on that line. <b>2</b> the review, submitted as a comment.</figcaption>
+      </figure>
+      <p>To run a peer's code before you comment: in GitHub Desktop, <span class="ui">Current Branch</span> → <span class="ui">Pull requests</span> tab, select the request, and GitHub Desktop checks it out. Come back to <code>main</code> with <span class="ui">Current Branch</span> before you work on your own code.</p>
+      <p class="callout">Reviewing is reading, questioning and suggesting. Copying code or text from another student, or letting someone copy yours, is plagiarism under the rules of the course repository.</p>
+
+      <h2 id="s9">9. Stay in sync with the course repository</h2>
+      <p>The instructor may update the course repository during the practical, for example to fix a script. Your fork then falls behind. Bring the update in with two moves.</p>
+      <p><strong>On GitHub.</strong> Open your fork in the browser. A line says "This branch is N commits behind". Click <span class="ui">Sync fork</span> → <span class="ui">Update branch</span>.</p>
+      <p><strong>On your laptop.</strong> In GitHub Desktop, click <span class="ui">Fetch origin</span>, then <span class="ui">Pull origin</span> when the button changes.</p>
+      <figure class="shot-figure" data-shot="images/github-desktop/09-pull.png">
+        <div class="shot">
+          <div class="shot-bar"><i></i><i></i><i></i><span>GitHub Desktop</span></div>
+          <div class="gd-top">
+            <div><small>Current Repository</small>AI4Transcriptomics_AI4OH_2026 ▾</div>
+            <div><small>Current Branch</small>main ▾</div>
+            <div class="hl"><b class="pin">1</b><small>Last fetched just now</small>⇩ Pull origin <em>2 ↓</em></div>
+          </div>
+          <div class="gd-body">
+            <div class="gd-side"><div class="gd-tabs"><span>Changes</span><span class="on hl"><b class="pin">2</b>History</span></div><p class="gd-file">Merge branch 'main' of AI4Health-DAISY-LIG/…</p><p class="gd-file">Run step 1: fetch and audit GSE115650</p></div>
+            <div class="gd-main"><p class="gd-empty">Select a commit to see what it changed.</p></div>
+          </div>
+        </div>
+        <figcaption><b>1</b> the commits of the synced fork wait to be pulled. <b>2</b> after the pull, History shows the update next to your own commits.</figcaption>
+      </figure>
+      <p>Commit or push your own work before you sync. You can also do it without the browser: <span class="ui">Branch</span> → <span class="ui">Merge into current branch…</span>, choose <code>upstream/main</code>, then <span class="ui">Push origin</span>.</p>
+
+      <h2 id="s10">10. Cite your work in the report</h2>
+      <p>Each factual claim of your report links to your code, your results or your worksheets. Two objects make these links stable.</p>
+      <p><strong>A permalink.</strong> On GitHub, open the file in your fork, click the line number, then <span class="ui">…</span> → <span class="ui">Copy permalink</span>. A permalink contains the hash of a commit, so it still points to the same lines after you push new commits.</p>
+      <p><strong>The hash of your last commit.</strong> The report asks for the commit your results are based on. In GitHub Desktop, open <span class="ui">History</span>, right-click the commit and choose <span class="ui">Copy SHA</span>.</p>
+      <p>The report itself stays out of the repository: you submit it as a PDF on UNESS.</p>
+
+      <h2 id="s11">11. Troubleshoot with small checks</h2>
+      <h3 id="earlier-commits">I committed before I opened the pull request</h3>
+      <p>Nothing to attach. A pull request does not hold a list of commits chosen by hand: it shows each commit that is on the <code>main</code> of your fork and not yet on your branch of the course repository. The commits you made before you opened it are included from the start, and those you push later join it automatically.</p>
+      <p>Check it: open your pull request on GitHub and click the <span class="ui">Commits</span> tab. Your earliest commit should be at the top of the list. If commits are missing, one of three things happened.</p>
+      <ul>
+        <li><strong>They are not pushed.</strong> In GitHub Desktop the top bar reads <span class="ui">Push origin</span> with a counter. Click it, then reload the pull request.</li>
+        <li><strong>They are on another branch.</strong> The <span class="ui">History</span> tab of <code>main</code> does not show them, and <span class="ui">Current Branch</span> lists a second branch. Switch to <code>main</code>, then <span class="ui">Branch</span> → <span class="ui">Merge into current branch…</span>, choose that branch, and click <span class="ui">Push origin</span>.</li>
+        <li><strong>They are in another folder.</strong> You first worked in a clone of the course repository, or in a downloaded copy, and cloned your fork later. For a clone of the course repository, follow "The push is refused" below: its commits then go to your fork. For a downloaded copy without Git, copy your files into the clone of your fork and commit them there; the commit will carry today's date.</li>
+      </ul>
+      <h3>The push is refused: permission denied</h3>
+      <p>You cloned the course repository instead of your fork. Look at <span class="ui">Repository</span> → <span class="ui">Repository settings</span> → <span class="ui">Remote</span>: the address must contain your handle. Replace it with the address of your fork and push again. Your commits are kept.</p>
+      <h3>My pull request targets main, or my own fork</h3>
+      <p>Open the pull request on GitHub, click <span class="ui">Edit</span> next to its title, and change the base branch to the one named after your handle. If the base repository is wrong, close the request and open a new one.</p>
+      <h3>A data file or a PDF appears in Changes</h3>
+      <p>Untick it and move it into <code>practical/data/</code> or <code>practical/doc/</code>, which git ignores. If you already committed it and have not pushed, <span class="ui">History</span> → right-click the commit → <span class="ui">Undo commit</span>. If you already pushed, ask in an Issue before you do anything else: a file stays in the history after you delete it.</p>
+      <h3>The pull after a sync shows a conflict</h3>
+      <p>You and the instructor changed the same lines. GitHub Desktop lists the conflicted files and opens them in your editor. Each conflict is marked with <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code> and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>. Keep the lines you want, delete the markers, save, then click <span class="ui">Continue merge</span> and push.</p>
+      <h3>GitHub Desktop proposes a force push</h3>
+      <p>Stop and ask. A forced push rewrites the history that your pull request shows and that reviewers have read.</p>
+
+      <h2 id="equivalents">The same operations on the command line</h2>
+      <p>The six commands of <a href="index.html#courses-3">Course 03</a>, and the ones a fork adds.</p>
+      <div class="practical-table">
+        <table>
+          <thead><tr><th>You want to</th><th>GitHub Desktop</th><th>Command line</th></tr></thead>
+          <tbody>
+            <tr><td>Copy your fork to your laptop</td><td>File → Clone repository…</td><td><code>git clone &lt;url of your fork&gt;</code></td></tr>
+            <tr><td>Declare the course repository</td><td>Done at the clone ("contribute to the parent project")</td><td><code>git remote add upstream &lt;url of the course repository&gt;</code></td></tr>
+            <tr><td>See what changed</td><td>Changes tab</td><td><code>git status</code>, <code>git diff</code></td></tr>
+            <tr><td>Choose what goes in the commit</td><td>Checkboxes on files and lines</td><td><code>git add practical/results practical/worksheets</code></td></tr>
+            <tr><td>Take the snapshot</td><td>Summary + Commit to main</td><td><code>git commit -m "Run step 1: fetch and audit GSE115650"</code></td></tr>
+            <tr><td>Send your commits to your fork</td><td>Push origin</td><td><code>git push</code></td></tr>
+            <tr><td>Ask your fork for news</td><td>Fetch origin</td><td><code>git fetch</code></td></tr>
+            <tr><td>Bring the news in</td><td>Pull origin</td><td><code>git pull</code></td></tr>
+            <tr><td>Bring the course repository in</td><td>Branch → Merge into current branch… → upstream/main</td><td><code>git fetch upstream</code>, then <code>git merge upstream/main</code></td></tr>
+            <tr><td>Read the history, copy a commit hash</td><td>History tab → Copy SHA</td><td><code>git log --oneline</code></td></tr>
+            <tr><td>Fork, open the pull request, open an issue, review, sync a fork</td><td>In the browser</td><td>In the browser as well: Git has no command for them</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="gitlab">GitHub Desktop with GitLab</h2>
+      <p>The practical sessions use GitHub. For your other projects, GitHub Desktop also works with a repository hosted on GitLab: clone, commit, push, fetch and pull are plain Git.</p>
+      <ul>
+        <li>You do not sign in. Create a personal access token on GitLab with the <code>read_repository</code> and <code>write_repository</code> scopes, clone through the <span class="ui">URL</span> tab, and give your GitLab username with the token as password.</li>
+        <li>The buttons that open issues and pull requests only know GitHub. On GitLab you do those steps in the browser, where a pull request is called a <em>merge request</em>.</li>
+      </ul>
+
+      <h2 id="next">Next step</h2>
+      <ul>
+        <li>The <a href="https://github.com/AI4Health-DAISY-LIG/AI4Transcriptomics_AI4OH_2026" target="_blank" rel="noreferrer">course repository ↗</a>: rules, grading, deadlines, and the four steps of the practical in <code>practical/README.md</code>.</li>
+        <li><a href="index.html#courses-3">Course 03 · Git Best Practices</a> and its <a href="https://www.youtube.com/watch?v=YnwD_9Stjh0" target="_blank" rel="noreferrer">video ↗</a>: the same operations with commands, plus <code>.gitignore</code>, uv and the repository structure.</li>
+        <li><a href="https://ai4health-daisy-lig.github.io/python4beginners/tutorial.html?collection=tutorials&lesson=github" target="_blank" rel="noreferrer">Use GitHub to share and improve your work ↗</a>, in the group's Python for beginners tutorials.</li>
+        <li><a href="https://docs.github.com/en/desktop" target="_blank" rel="noreferrer">GitHub Desktop documentation ↗</a>: the reference when a menu name has changed since GitHub Desktop 3.</li>
+      </ul>
+      <p class="practical-back"><a href="index.html#resources">← All resources</a></p>
+    </article>
+  </div>
+  <footer class="site-footer"><span>AI4Transcriptomics</span><span>From Nucleus to Neural Networks</span><span>Built for open, careful science</span></footer>
+  <script>
+    // Each figure is a drawn illustration. If a real screenshot exists at the path given in
+    // data-shot (for example site/images/github-desktop/03-commit.png), it replaces the drawing.
+    document.querySelectorAll('figure[data-shot]').forEach((figure) => {
+      const image = new Image();
+      image.onload = () => { image.alt = figure.querySelector('figcaption').textContent; figure.querySelector('.shot').replaceWith(image); figure.classList.add('is-photo'); };
+      image.src = figure.dataset.shot;
+    });
+  </script>
+</body>
+</html>

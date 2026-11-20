@@ -1,0 +1,87 @@
+{
+  "_comment": "Hand-maintained content of the course site. scripts/build-site.ps1 merges it with the course files (data/courseN.md) into site/data.json. The 'go further' cards of the Resources page are NOT listed here: they are generated from the References section of each course file.",
+  "objectives": [
+    {
+      "id": "interpretability",
+      "title": "Interpretability",
+      "text": "Understand how the acquisition of transcriptomics data constrains the way we analyse those data and the way we interpret the results.",
+      "courses": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        8
+      ]
+    },
+    {
+      "id": "systems",
+      "title": "Systems thinking",
+      "text": "Think in systems: connect concepts as graphs, with the mind map and the Biolink activity.",
+      "courses": [
+        1,
+        2,
+        3,
+        4,
+        7
+      ]
+    },
+    {
+      "id": "reproducibility",
+      "title": "Reproducibility",
+      "text": "Produce analyses that another person can rerun and obtain the same numbers, through the practical sessions.",
+      "courses": [
+        3,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "id": "provenance",
+      "title": "Provenance, transparency and collaborative translational science",
+      "text": "Record where data and results come from, work in the open, and collaborate with shared tooling such as GitHub.",
+      "courses": [
+        3,
+        5,
+        7
+      ]
+    }
+  ],
+  "code": [
+    {
+      "type": "Repository · Practical sessions",
+      "title": "AI4Transcriptomics 2026",
+      "text": "The course repository of the practical sessions: instructions, grading, scripts and worksheets. Fork it to start.",
+      "url": "https://github.com/AI4Health-DAISY-LIG/AI4Transcriptomics_AI4OH_2026"
+    },
+    {
+      "type": "Repository · GitHub",
+      "title": "AI4Transcriptomics",
+      "text": "The repository of this course site.",
+      "url": "https://github.com/AI4Health-DAISY-LIG/AI4Transcriptomics"
+    },
+    {
+      "type": "Tutorial · AI4Health@DAISY group",
+      "title": "Python for beginners",
+      "text": "Setting up Python and uv, step by step, before the first practical session.",
+      "url": "https://ai4health-daisy-lig.github.io/python4beginners/tutorial.html?collection=tutorials&lesson=setup"
+    }
+  ],
+  "additional": [
+    {
+      "type": "Practical sessions · Course 03",
+      "title": "Git without the terminal: GitHub Desktop",
+      "text": "The Git side of the practical sessions with buttons: fork, commit, push, the pull request that carries your submission, Issues and peer review. With the command-line equivalents of Course 3.",
+      "url": "practical-github-desktop.html",
+      "courses": [
+        3
+      ],
+      "objectives": [
+        "reproducibility",
+        "provenance"
+      ]
+    }
+  ]
+}
